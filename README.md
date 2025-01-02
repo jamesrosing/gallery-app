@@ -1,43 +1,45 @@
-# 📸 **Next.js Gallery Application with Supabase**
 
-A **modern, mobile-first, flat-design, SEO-optimized gallery application** built with **Next.js 14**, **Supabase**, **TailwindCSS**, and **Framer Motion**. The app is designed to efficiently organize, tag, and filter images across **Galleries**, **Albums**, **Cases**, and **Images**.
+# 📸 Next.js Gallery Application with Supabase
 
----
-
-## 🚀 **Features**
-
-✅ **Mobile-First Design:** Optimized for seamless responsiveness.  
-✅ **Flat & Modern UI:** Built with TailwindCSS for clean, minimal styling.  
-✅ **SEO Optimized:** Includes meta tags, sitemap, and structured data.  
-✅ **Dynamic Image Organization:** Galleries → Albums → Cases → Images.  
-✅ **Image Tagging & Filtering:** Support for advanced tag-based filtering.  
-✅ **Multiple Image Upload:** Upload multiple images in bulk.  
-✅ **Admin Dashboard:** Manage Galleries, Albums, Cases, and Images.  
-✅ **Fast Load Times:** Leveraging Vercel Image Optimization and caching.  
-✅ **Secure Auth System:** Powered by Supabase Authentication.
+A **modern, mobile-first, flat-design, SEO-optimized gallery application** built with **Next.js 14**, **Supabase**, **TailwindCSS**, and **Framer Motion**.  
+This application is designed to efficiently organize, tag, and filter images across **Galleries**, **Albums**, **Cases**, and **Images**.
 
 ---
 
-## 🛠️ **Tech Stack**
+## 🚀 Features
+
+- **Mobile-First Design:** Optimized for seamless responsiveness.
+- **Flat & Modern UI:** Built with TailwindCSS for clean, minimal styling.
+- **SEO Optimized:** Includes meta tags, sitemap, and structured data.
+- **Dynamic Image Organization:** Galleries → Albums → Cases → Images.
+- **Image Tagging & Filtering:** Support for advanced tag-based filtering.
+- **Multiple Image Upload:** Upload multiple images in bulk.
+- **Admin Dashboard:** Manage Galleries, Albums, Cases, and Images.
+- **Fast Load Times:** Leveraging Vercel Image Optimization and caching.
+- **Secure Auth System:** Powered by Supabase Authentication.
+
+---
+
+## 🛠️ Tech Stack
 
 ### **Frontend:**
-- **Framework:** Next.js 14 (App Router)
-- **Styling:** TailwindCSS + Radix UI Components
-- **Animations:** Framer Motion
-- **SEO:** Next.js Metadata API
-- **Image Optimization:** Vercel Image Optimization
+- Framework: Next.js 14 (App Router)
+- Styling: TailwindCSS + Radix UI Components
+- Animations: Framer Motion
+- SEO: Next.js Metadata API
+- Image Optimization: Vercel Image Optimization
 
 ### **Backend / Database:**
-- **CMS & Database:** Supabase
-- **Auth:** Supabase Auth (Admin Access)
+- CMS & Database: Supabase
+- Auth: Supabase Auth (Admin Access)
 
 ### **Deployment:**
-- **Platform:** Vercel
-- **CDN:** Cloudflare R2 (optional for storage optimization)
+- Platform: Vercel
+- CDN: Cloudflare R2 (optional for storage optimization)
 
 ---
 
-## 📂 **Project Structure**
+## 📂 Project Structure
 
 ```plaintext
 /app
@@ -75,7 +77,7 @@ tsconfig.json              # TypeScript configuration
 
 ---
 
-## 📊 **Database Schema**
+## 📊 Database Schema
 
 ### **1. Galleries**
 - `id`: Unique identifier  
@@ -101,69 +103,113 @@ tsconfig.json              # TypeScript configuration
 - `case_id`: Reference to a case  
 - `image_url`: URL to the stored image  
 - `caption`: Description or caption of the image  
-- `tags`: Array of tags (e.g., `Before`, `After`, `Side View`)  
+- `tags`: Array of tags (e.g., Before, After, Side View)  
 
 ---
 
-## 🔑 **Authentication**
+## 🔑 Authentication
 
-1. Admin authentication via **Supabase Auth**.
-2. Admin Dashboard is secured and requires login.
-3. **Admin Features:**
-   - Create/Edit/Delete Galleries
-   - Add/Edit/Delete Albums
-   - Manage Cases
-   - Bulk Image Upload
-   - Tag and Organize Images
-
----
-
-## 🖥️ **How to Run Locally**
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-repo/gallery-app.git
-   cd gallery-app
-   ```
-
-2. **Install Dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Set Environment Variables:**
-   Create a `.env.local` file and add:
-   ```env
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-   ```
-
-4. **Start Development Server:**
-   ```bash
-   npm run dev
-   ```
-
-5. Visit [http://localhost:3000](http://localhost:3000) in your browser.
+- Admin authentication via **Supabase Auth**.
+- Admin Dashboard is secured and requires login.
+- **Admin Features:**  
+  - Create/Edit/Delete Galleries  
+  - Add/Edit/Delete Albums  
+  - Manage Cases  
+  - Bulk Image Upload  
+  - Tag and Organize Images  
 
 ---
 
-## 🚀 **Deployment**
+## 🖥️ How to Run Locally
 
-1. Push code to **GitHub**.
+### **1. Clone the Repository:**
+```bash
+git clone https://github.com/your-repo/gallery-app.git
+cd gallery-app
+```
+
+### **2. Install Dependencies:**
+```bash
+npm install
+```
+
+### **3. Set Environment Variables:**
+Create a `.env.local` file and add:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+### **4. Start Development Server:**
+```bash
+npm run dev
+```
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 🚀 Deployment
+
+### **Steps to Deploy on Vercel:**
+1. Push code to GitHub.
 2. Connect your repository to **Vercel**.
 3. Add environment variables in **Vercel Dashboard**.
 4. Deploy the project.
 
 ---
 
-## 📜 **License**
+## 🎯 Core Functionalities
 
-This project is licensed under the **MIT License**.
+### **1. Galleries (Top Level):**
+Display broad categories like **Head & Neck**, **Breast**, and **Body**.
+
+### **2. Albums (Subcategories):**
+Examples: **Face**, **Eyelids**, **Nose**, **Breast Augmentation**, **Abdominoplasty**.
+
+### **3. Cases (Client-Specific Procedures):**
+Individual client entries with metadata (e.g., age, date, description).
+
+### **4. Images (Multiple Uploads and Tagging):**
+- Up to **5 images per case**.  
+- Supports tags like `Before`, `After`, `Side View`.
+
+### **5. Admin Dashboard:**
+Intuitive interface for managing galleries, albums, cases, and images.
 
 ---
 
-## 📞 **Support**
+## 📊 Filtering System
 
+- **By Tags:** `Before`, `After`, `Side View`.  
+- **By Album:** Specific procedure albums.  
+- **By Metadata:** Procedure type, age, surgeon name.  
+
+**Example API Query:**
+```ts
+const { data } = await supabase
+  .from('images')
+  .select('*')
+  .overlaps('tags', ['Before']);
+```
+
+---
+
+## 📞 Support
+
+For support, please contact:  
 - 📧 **Email:** support@yourdomain.com  
 - 🌐 **Website:** [https://yourdomain.com](https://yourdomain.com)  
 
+---
+
+## 📝 Future Enhancements
+
+- Advanced search across Galleries, Albums, and Cases.
+- AI-based image tagging.
+- User role-based access control.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
